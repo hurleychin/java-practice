@@ -1,5 +1,6 @@
 package com.evil.exception;
 
+
 public class TryWithResource implements AutoCloseable{
 
     public void doIt(){
