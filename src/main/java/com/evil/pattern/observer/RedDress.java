@@ -28,7 +28,7 @@ public class RedDress implements Observable{
     @Override
     public void notifyObserver() {
         for(Observer user:users){
-                user.update();
+                user.update(true);
         }
 
     }
