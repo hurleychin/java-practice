@@ -1,19 +1,30 @@
 package com.evil.generics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author qinhulin
  * @date 5/13/18
  */
 public class GenericClass<T>{
 
-    private T key;
+    private List<T> list=new ArrayList<>();
 
-    public void setKey(T key) {
-        this.key = key;
+    public void addList(T key) {
+        this.list.add(key);
     }
 
-    public T getKey() {
-        return key;
+    public List<T> getKey() {
+        return list;
+    }
+
+    public static void main(String[] args) {
+        GenericClass<Double> genericClass=new GenericClass<>();
+        genericClass.addList(0.001);
+        List<? extends Number> values=genericClass.getKey();
+       System.out.println(values);
+
     }
 
 }
