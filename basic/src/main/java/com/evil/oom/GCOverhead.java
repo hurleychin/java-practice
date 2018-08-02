@@ -1,5 +1,7 @@
 package com.evil.oom;
 
+import sun.misc.VM;
+
 import java.util.Map;
 import java.util.Random;
 
@@ -19,6 +21,7 @@ public class GCOverhead {
         Map map = System.getProperties();
         Random r = new Random();
         while (true) {
+            Thread.sleep(2000);
             map.put(r.nextInt(), "value");
         }
     }

@@ -37,7 +37,7 @@ public class BankDemo {
                 System.out.print("资源" + j + ":" + NEED[i][j] + " ");
             }
             System.out.print("/n");
-        }
+            }
         System.out.print("各进程已经得到的资源量: /n");
         for (i = 0; i < M; i++) {
             System.out.print("进程");
