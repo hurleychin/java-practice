@@ -5,6 +5,6 @@
     <dubbo:application name="demo-provider"/>
     <dubbo:registry protocol="zookeeper" client="curator"
                     address="192.168.1.121:2181,192.168.1.121:2182,192.168.1.121:2183"/>
-    <dubbo:service interface="com.evil.dubbo.api.DemoService" ref="demoService"/>
-    <bean id="demoService" class="com.evil.dubbo.provider.DemoServiceImpl"/>
+    <dubbo:service interface="api.DemoService" ref="demoService"/>
+    <bean id="demoService" class="provider.DemoServiceImpl"/>
 </beans>

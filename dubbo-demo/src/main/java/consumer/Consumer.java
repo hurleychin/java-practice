@@ -1,9 +1,7 @@
-package com.evil.dubbo.consumer;
+package consumer;
 
-import com.evil.dubbo.api.DemoService;
+import api.DemoService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.io.IOException;
 
 /**
  * @author qinhu

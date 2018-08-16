@@ -1,6 +1,6 @@
-package com.evil.dubbo.provider;
+package provider;
 
-import com.evil.dubbo.api.DemoService;
+import api.DemoService;
 
 /**
  * @author qinhu

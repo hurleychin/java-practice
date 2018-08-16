@@ -1,4 +1,4 @@
-package com.evil.dubbo.api;
+package api;
 
 public interface DemoService {
     String sayHello(String name);

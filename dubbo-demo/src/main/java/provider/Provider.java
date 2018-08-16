@@ -1,4 +1,4 @@
-package com.evil.dubbo.provider;
+package provider;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
