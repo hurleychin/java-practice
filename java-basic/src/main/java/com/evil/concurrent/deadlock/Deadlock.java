@@ -1,4 +1,4 @@
-package com.evil.deadlock;
+package com.evil.concurrent.deadlock;
 
 /**
  * @author qinhulin on 2018-06-12
