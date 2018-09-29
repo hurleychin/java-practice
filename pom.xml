@@ -9,8 +9,8 @@
     <modules>
         <module>java-basic</module>
         <module>dubbo-demo</module>
-        <module>spring-boot-demo</module>
         <module>mongodb-demo</module>
+        <module>spring-samples</module>
     </modules>
 
       <build>

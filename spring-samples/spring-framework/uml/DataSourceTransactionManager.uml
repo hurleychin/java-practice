@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.springframework.jdbc.datasource.DataSourceTransactionManager</OriginalElement>
+  <nodes>
+    <node x="163.14999999999998" y="0.0">org.springframework.transaction.PlatformTransactionManager</node>
+    <node x="352.5" y="1348.0">org.springframework.jdbc.datasource.DataSourceTransactionManager</node>
+    <node x="237.0" y="146.0">org.springframework.transaction.support.AbstractPlatformTransactionManager</node>
+    <node x="944.0" y="696.0">org.springframework.beans.factory.InitializingBean</node>
+    <node x="0.0" y="696.0">org.springframework.transaction.support.ResourceTransactionManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.springframework.jdbc.datasource.DataSourceTransactionManager" target="org.springframework.transaction.support.AbstractPlatformTransactionManager">
+      <point x="0.0" y="-202.0" />
+      <point x="0.0" y="576.0" />
+    </edge>
+    <edge source="org.springframework.transaction.support.ResourceTransactionManager" target="org.springframework.transaction.PlatformTransactionManager">
+      <point x="0.0" y="-26.0" />
+      <point x="108.5" y="121.0" />
+      <point x="254.39999999999998" y="121.0" />
+      <point x="-91.25" y="48.0" />
+    </edge>
+    <edge source="org.springframework.jdbc.datasource.DataSourceTransactionManager" target="org.springframework.beans.factory.InitializingBean">
+      <point x="152.0" y="-202.0" />
+      <point x="732.5" y="1323.0" />
+      <point x="1041.0" y="1323.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="org.springframework.transaction.support.AbstractPlatformTransactionManager" target="org.springframework.transaction.PlatformTransactionManager">
+      <point x="0.0" y="-576.0" />
+      <point x="580.5" y="121.0" />
+      <point x="436.9" y="121.0" />
+      <point x="91.25" y="48.0" />
+    </edge>
+    <edge source="org.springframework.jdbc.datasource.DataSourceTransactionManager" target="org.springframework.transaction.support.ResourceTransactionManager">
+      <point x="-152.0" y="-202.0" />
+      <point x="428.5" y="1323.0" />
+      <point x="108.5" y="1323.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.179119638826185" x="499.03130085191924" y="701.2817076672729" />
+  <SelectedNodes>
+    <node>org.springframework.jdbc.datasource.DataSourceTransactionManager</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
