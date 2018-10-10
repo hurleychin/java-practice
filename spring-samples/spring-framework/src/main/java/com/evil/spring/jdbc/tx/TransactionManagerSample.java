@@ -104,8 +104,8 @@ public class TransactionManagerSample {
         unCommit.start();*/
 
 
-//        DefaultTransactionDefinition definition=new DefaultTransactionDefinition();
-        TransactionStatus status=transactionManager.getTransaction(null);
+        DefaultTransactionDefinition definition=new DefaultTransactionDefinition();
+        TransactionStatus status=transactionManager.getTransaction(definition);
         Console.out(status);
 
         try {
@@ -115,7 +115,7 @@ public class TransactionManagerSample {
             Console.out(users);
 //            LockSupport.unpark(unCommit);
             DefaultTransactionDefinition definition2=new DefaultTransactionDefinition();
-            definition2.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
+            definition2.setPropagationBehavior(TransactionDefinition.PROPAGATION_NEVER);
             TransactionStatus status2=transactionManager.getTransaction(definition2);
             Console.out(status2);
             try {

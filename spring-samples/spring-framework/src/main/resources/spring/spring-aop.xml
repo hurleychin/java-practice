@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop.xsd ">
+
+    <!-- We don't need to this; This is required only in annotation based AOP support -->
+    <!-- <aop:aspectj-autoproxy /> -->
+
+    <aop:config><!-- proxy-target-class="true"-->
+        <!-- Spring AOP aspect -->
+        <aop:aspect id="loggingAspect" ref="barAspect">
+            <!-- Spring AOP Pointcut definitions -->
+            <aop:pointcut id="loggingOperation" expression="execution(* com.evil.spring.aop.xml.BarImpl.*(..))" />
+            <!-- Spring AOP advises -->
+            <aop:around pointcut-ref="loggingOperation" method="log" />
+        </aop:aspect>
+    </aop:config>
+    <!-- Spring AOP aspect instances -->
+    <bean id="barAspect" class="com.evil.spring.aop.xml.BarAspect" />
+    <!-- Target Object -->
+    <bean id="bar" class="com.evil.spring.aop.xml.BarImpl" />
+
+</beans>
