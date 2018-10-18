@@ -10,7 +10,8 @@
         <module>java-basic</module>
         <module>dubbo-demo</module>
         <module>mongodb-demo</module>
-        <module>spring-samples</module>
+        <module>spring-framework</module>
+        <module>spring-boot</module>
     </modules>
 
       <build>

@@ -16,7 +16,7 @@
     - [X] CountDownLatch
     - [X] CyclicBarrier
     - [X] Semaphore
-    - [ ] Exchanger
+    - [X] Exchanger
     - [ ] java.util.concurrent.locks.StampedLock
     - [ ] java.util.concurrent.atomic.*
     - [ ] Executors
@@ -27,5 +27,8 @@
         - [ ] ConcurrentHashMap/ConcurrentLinkedQueue
 * 分布式
     - [ ] SPI
+    - [ ] RedissonClient
 * 设计模式
-    - [ ] 迭代器
+    - [X] 迭代器
+* Guava
+
