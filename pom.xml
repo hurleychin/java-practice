@@ -12,6 +12,7 @@
         <module>mongodb-demo</module>
         <module>spring-framework</module>
         <module>spring-boot</module>
+        <module>activemq-demo</module>
     </modules>
 
       <build>
