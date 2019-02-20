@@ -1,4 +1,4 @@
-package com.evil.reference;
+package com.evil.passbyvalue;
 
 /**
  * @author qinhu
