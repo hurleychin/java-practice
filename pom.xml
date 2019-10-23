@@ -15,6 +15,8 @@
         <module>activemq</module>
         <module>netty</module>
         <module>mybatis</module>
+        <module>kafka</module>
+        <module>sharding-jdbc</module>
     </modules>
 
     <dependencies>
