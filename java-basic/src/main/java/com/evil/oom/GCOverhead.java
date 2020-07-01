@@ -1,7 +1,5 @@
 package com.evil.oom;
 
-import sun.misc.VM;
-
 import java.util.Map;
 import java.util.Random;
 

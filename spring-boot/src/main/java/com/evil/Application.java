@@ -1,9 +1,11 @@
-package com.evil.springboot;
+package com.evil;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.evil.*")
+@SpringBootApplication
+@MapperScan("com.evil.easycode.dao")
 public class Application {
 
     public static void main(String[] args) {
