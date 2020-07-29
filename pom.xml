@@ -17,6 +17,7 @@
         <module>mybatis</module>
         <module>kafka</module>
         <module>sharding-jdbc</module>
+        <module>spring-cloud</module>
     </modules>
 
     <dependencies>
@@ -67,6 +68,12 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>27.0-jre</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>

@@ -1,4 +1,4 @@
-package com.evil.ribbon;
+package com.evi.ribbon;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AvailabilityFilteringRule;

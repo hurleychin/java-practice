@@ -1,4 +1,4 @@
-package com.evil.ribbon;
+package com.evi.ribbon;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;

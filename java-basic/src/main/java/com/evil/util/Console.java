@@ -13,8 +13,14 @@ import java.util.Date;
 public class Console {
 
 
-    public static void out(Object x){
-        System.err.println(getTime()+Thread.currentThread().toString().replace("Thread","-")+" "+x);
+    public static void out(Object o){
+        StringBuffer out=new StringBuffer();
+        out.append(getTime());
+        out.append(" ");
+        out.append(Thread.currentThread());
+        out.append(" ");
+        out.append(o);
+        System.err.println(out.toString());
     }
 
     public static String getTime(){

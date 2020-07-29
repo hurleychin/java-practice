@@ -8,10 +8,10 @@ import java.util.concurrent.*;
  * @author qinhu
  * @date 2018-08-12
  */
-public class ThreadDemo {
+public class ThreadDaemonDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         Thread thread=new Thread(()->{
-            while (true){
+            while (!Thread.currentThread().isInterrupted()){
                 try {
                     Console.out("running...");
                     TimeUnit.SECONDS.sleep(1);

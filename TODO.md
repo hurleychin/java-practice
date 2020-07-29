@@ -53,3 +53,14 @@
  - [ ] 方法栈
 
 * [Sharding-JDBC](https://shardingsphere.apache.org/document/current/cn/quick-start/sharding-jdbc-quick-start/)
+
+* SpringCloud Ribbon
+    - [ ] an IClientConfig, which stores client configuration for a client or load balancer,
+ 
+    - [ ] an ILoadBalancer, which represents a software load balancer,
+ 
+    - [ ] a ServerList, which defines how to get a list of servers to choose from,
+ 
+    - [ ] an IRule, which describes a load balancing strategy, and
+ 
+    - [ ] an IPing, which says how periodic pings of a server are performed.
