@@ -4,23 +4,25 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="defaultMessageListenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
-        <property name="connectionFactory" ref="cachingConnectionFactory"/>
+        <property name="connectionFactory" ref="singleConnectionFactory"/>
         <property name="destination" ref="activeMQQueue"/>
         <property name="messageListener" ref="myMessageListener"/>
+        <property name="recoveryInterval" value="30000" />
     </bean>
 
 
-    <bean id="cachingConnectionFactory"
-          class="org.springframework.jms.connection.CachingConnectionFactory">
+    <bean id="singleConnectionFactory"
+          class="org.springframework.jms.connection.SingleConnectionFactory">
         <property name="targetConnectionFactory" ref="pooledConnectionFactory"/>
+        <property name="reconnectOnException" value="true"/>
     </bean>
     <bean id="pooledConnectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory">
         <property name="connectionFactory" ref="activeMQConnectionFactory"/>
         <property name="maxConnections" value="10"/>
     </bean>
     <bean id="activeMQConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
-<!--        <property name="brokerURL" value="failover:(tcp://127.0.0.1:61616)"/>-->
-        <property name="brokerURL" value="tcp://archlinux:61616"/>
+<!--    <property name="brokerURL" value="failover:(tcp://127.0.0.1:61616)"/>-->
+        <property name="brokerURL" value="failover:(tcp://archlinux:61616)"/>
     </bean>
 
     <bean id="activeMQQueue" class="org.apache.activemq.command.ActiveMQQueue">
