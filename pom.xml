@@ -18,6 +18,7 @@
         <module>kafka</module>
         <module>sharding-jdbc</module>
         <module>spring-cloud</module>
+        <module>algorithm</module>
     </modules>
 
     <dependencies>
