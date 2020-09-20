@@ -1,4 +1,4 @@
-package com.evil.nio;
+package com.evil.io.nio;
 
 import com.evil.util.Console;
 
