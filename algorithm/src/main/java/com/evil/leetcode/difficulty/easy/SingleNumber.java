@@ -1,4 +1,4 @@
-package com.evil.tag.hashtable;
+package com.evil.leetcode.difficulty.easy;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.evil.tag.sort;
+package com.evil.sort;
 
 import java.util.Arrays;
 
