@@ -11,12 +11,11 @@ public class Insertion {
     public static void main(String[] args) {
 
         int[] nums = {8, 9, 5, 4, 3, 7, 6, 2, 1};
-
-        Arrays.stream(sort(nums)).forEach(System.out::println);
-
+        sort(nums);
+        System.out.println(Arrays.toString(nums));
     }
 
-    public static int[] sort(int[] nums) {
+    public static void sort(int[] nums) {
 
         for (int i = 1; i < nums.length; i++) {
 
@@ -29,6 +28,5 @@ public class Insertion {
             }
             nums[j]=key;
         }
-        return nums;
     }
 }

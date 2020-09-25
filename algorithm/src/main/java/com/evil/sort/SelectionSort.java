@@ -10,13 +10,13 @@ public class SelectionSort {
     public static void main(String[] args) {
 
         int[] nums = {8, 9, 5, 4, 3, 7, 6, 2, 1};
-
-        Arrays.stream(sort(nums)).forEach(System.out::println);
+        sort(nums);
+        System.out.println(nums);
 
     }
 
 
-    public static int[] sort(int[] nums) {
+    public static void sort(int[] nums) {
 
         for(int i=0;i<nums.length-1;i++){
             int minIndex=i;
@@ -33,6 +33,5 @@ public class SelectionSort {
                 nums[i]^=nums[minIndex];
             }
         }
-        return nums;
     }
 }
