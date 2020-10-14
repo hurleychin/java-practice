@@ -21,15 +21,14 @@ public class BinarySearch {
         int right=nums.length-1;
 
         while(left<=right){
-//            int mid=right-(right-left)/2;
             //无符号右移 >>>
             //   0111   2^2+2+1=7
             // + 0011   2^1+1=3
             // ----------------
-            //   l010   2^3+2=10
+            //   1010   2^3+2=10
             //>>>0101   2^2+1=5
-            int mid=(left+right)>>>1;
-            if(nums[mid]==target) return mid;
+            int mid=(left+right)>>>1; // =right-(right-left)/2;
+            if(nums[mid]>=target) return mid;
             if(nums[mid]>target){
                 right=mid-1;
             }
