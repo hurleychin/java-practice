@@ -2,20 +2,19 @@ package com.evil.collection;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author qinhulin on 2019-06-28
  */
-public class IteratorRemove {
+public class CollectionDemo {
     public static void main(String[] args) throws IOException, ParseException {
 
         List<String> hit=new ArrayList<>();
         hit.add("a");
         hit.add("b");
         hit.add("c");
+        hit.add("z");
 
         List<String> pList=new ArrayList<>();
         pList.add("a");
@@ -25,14 +24,20 @@ public class IteratorRemove {
         pList.add("e");
         pList.add("f");
 
-        Iterator iterator=pList.iterator();
-        while (iterator.hasNext()){
-           String e= (String) iterator.next();
-           if(hit.contains(e)){
-              iterator.remove();
-           }
-        }
+        Map<String,String> map=new HashMap<>();
+        map.put("a","1");
+        map.put("b","2");
+        map.put("c","3");
+        map.put("d","4");
 
-        System.out.println(pList);
+        Collection  keys=new ArrayList(map.keySet());
+
+        keys.removeAll(hit);
+        System.out.println( keys);
+
+//        pList.retainAll(hit);
+//        pList.removeAll(hit);
+//        System.out.println(pList);
+
     }
 }

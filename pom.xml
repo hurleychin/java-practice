@@ -12,7 +12,6 @@
         <module>mongodb</module>
         <module>spring-framework</module>
         <module>spring-boot</module>
-        <module>activemq</module>
         <module>netty</module>
         <module>mybatis</module>
         <module>kafka</module>

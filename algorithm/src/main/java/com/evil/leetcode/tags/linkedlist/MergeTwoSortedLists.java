@@ -1,4 +1,4 @@
-package com.evil.leetcode.tags.array;
+package com.evil.leetcode.tags.linkedlist;
 
 /**
  * @author qinhulin on 2020-09-27
