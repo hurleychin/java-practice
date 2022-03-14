@@ -1,8 +1,9 @@
 - [目录](README.md)
 
+- Java
+    - [Java本地缓存](java/Java本地缓存.md)
 - Git
-  - [Git常用命令](git/git-chang-yong-ming-ling.md)
-
+  - [Git常用命令](git/Git常用命令.md)
 - Linux
-  - [Archlinx设置静态ip](linux/archlinx-she-zhi-jing-tai-ip-systemd-networkd.md)
-  - [Linux常用命令](linux/linux-chang-yong-ming-ling.md)
+  - [ArchLinux设置静态IP](linux/ArchLinux设置静态IP.md)
+  - [Linux常用命令](linux/Linux常用命令.md)
