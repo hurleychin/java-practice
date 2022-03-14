@@ -1,4 +1,4 @@
-# Archlinx设置静态ip
+# ArchLinux设置静态ip
 
 
 
