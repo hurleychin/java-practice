@@ -1,4 +1,4 @@
-- [目录](README.md)
+- [首页](README.md)
 
 - Java
   - [Java本地缓存](java/Java本地缓存.md)
