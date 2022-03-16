@@ -7,7 +7,7 @@
 
 ---
 
-[首页](./_sidebar.md ':include')
+[目录](./_sidebar.md ':include')
 
 ---
 
