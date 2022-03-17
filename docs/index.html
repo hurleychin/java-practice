@@ -21,17 +21,11 @@
         subMaxLevel: 6,
         formatUpdated: 'Last Modified: {YYYY}-{MM}-{DD} {HH}:{mm}',
         ga: 'UA-88638293-1',
-        //disqus: 'hurleychin',
+        disqus: 'hurleychin',
         plugins: [
             EditOnGithubPlugin.create('https://github.com/hurleychin/java-practice/blob/master/docs/')
         ],
-        count:{
-            countable:true,
-            fontsize:'0.9em',
-            color:'rgb(C0,C0,C0)',
-            language:'chinese'
-        },
-        pagination: {
+       pagination: {
             crossChapter: true
         }
         
@@ -46,6 +40,6 @@
 <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
-<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
 </body>
 </html>
