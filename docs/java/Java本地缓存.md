@@ -8,7 +8,7 @@
 - [caffeine](https://github.com/ben-manes/caffeine)
 
 ## 参考资料
-[JSR-000107 JCache Final Specification](https://github.com/hurleychin/java-practice/blob/master/docs/_ref/JSR107FinalSpecification.pdf)
+[JSR107 Specification 1.1.1 Maintenance Release](https://docs.google.com/document/d/1ijduF_tmHvBaUS7VBBU2ZN8_eEBiFaXXg9OI0_ZxCrA/edit?usp=sharing)
 
 
 
