@@ -139,6 +139,93 @@ _对于在 Java 堆上实现的缓存，按引用存储是更快的存储技术�
 
 除了所需的默认一致性模型之外，实现还可以提供对不同一致性模型的支持。
 
+#### 缓存拓扑
+
+虽然规范没有强制要求特定的缓存拓扑结构，但可以认识到缓存条目可以很好地存储在本地和/或分布在多个进程中。实现可以选择不支持任何一个、一个、两个和/或其他拓扑。
+
+这个概念在规范中以多种方式表达：
+
+大多数变异方法提供具有无效或低成本返回类型的签名。例如，java.util.Map 提供了方法 V put(K key, V value)， javax.cache.Cache 提供了 void put(K key, V value)。
+
+还提供了具有更昂贵返回类型的版本。一个例子是 Cache 上的 V getAndPut(K key, V value) 方法。它像 Map 一样返回旧值。
+
+通过具有不假定进程内实现的创建语义，配置是可序列化的，因此可以通过网络发送。开发人员可以定义 CacheEntryListener、ExpiryPolicy、CacheEntryFilter、CacheWriter 和 CacheLoader 的实现，并将它们与缓存相关联。为了支持分布式拓扑，开发人员为他们的创建而不是实例定义了一个工厂。工厂接口是可序列化的。
+
+在整个规范中使用 Iterable 来处理可能很大的返回类型和参数。
+
+返回整个集合的方法（例如 Map 方法 keySet()）可能会出现问题。
+
+缓存可能太大，以至于密钥集可能无法放入可用内存中，并且它也可能非常低效网络。
+
+Cache、CacheEntryListener 子接口上的监听器方法和 CacheLoader 上的批处理方法都使用 Iterable。
+
+没有假设 CacheEntryListener、ExpiryPolicy、CacheEntryFilter、CacheWriter 和 CacheLoader 的实现在何处被实例化和执行。
+
+在分布式实现中，这些可能都位于数据附近，而不是与应用程序一起处理。
+
+CachingProvider.getCacheManager(URI uri, ClassLoader classLoader) 返回一个带有特定 ClassLoader 和 URI 的 CacheManager。这使实现能够实例化多个实例。
+
+#### 执行上下文
+
+EntryProcessors、CacheEntryListeners、CacheLoaders、CacheWriters 和 ExpiryPolicys（“自定义”）在配置它们的 CacheManager URI 和 ClassLoader 的上下文中进行实例化和操作。这意味着在部署时，这些自定义的实例必须可供缓存的 ClassLoader 定义的应用程序类使用并且可以访问它们。
+
+实现可以安全地假设此类定制可用于使用 CacheManager 提供的 ClassLoader 的 Cache。
+
+如何实现类的可用性取决于实现和部署。
+
+例如：在 Java EE 环境中，应用程序定义的定制可以部署在企业应用程序 ear/war/jar 的范围内。
+
+虽然定制可能在与应用程序相同的 ClassLoader 中可用，因此可以访问所有应用程序类，但为了确保可移植性，应用程序定制必须避免直接访问特定于部署的资源。相反，定制应该只尝试访问和改变提供给他们的缓存信息和条目。
+
+在支持它的实现和部署环境中，定制可以额外利用诸如资源注入（例如：CDI）之类的技术来允许直接访问应用程序和部署特定资源。然而，没有要求实现支持这种能力。
+
+#### 重入
+
+虽然本规范不限制开发人员在使用自定义 EntryProcessors、CacheEntryListeners、CacheLoaders、CacheWriters 和 ExpiryPolicys 时可能执行的操作，但缓存实现可能会限制来自这些接口的重入。例如;实现可能会限制 EntryProcessor 调用 Cache 上的方法或调用其他 EntryProcessor 的能力。类似地，实现可能会限制 CacheLoader/CacheWriter 访问 Cache 的能力。
+
+因此，强烈建议开发人员避免编写这些接口的可重入实现，因为这些实现可能不可移植。
+
+#### 一个简单的例子
+
+这个简单的示例创建了一个默认的 CacheManager，在其上配置了一个名为“simpleCache”的缓存，其键类型为 String，值类型为 Integer，有效期为一小时，然后执行一些缓存操作。
+
+```java
+   //resolve a cache manager
+    CachingProvider cachingProvider = Caching.getCachingProvider();
+    CacheManager cacheManager = cachingProvider.getCacheManager();
+
+    //configure the cache
+    MutableConfiguration<String, Integer> config = 
+   new MutableConfiguration<>()
+        .setTypes(String.class, Integer.class)
+        .setExpiryPolicyFactory(AccessedExpiryPolicy.factoryOf(ONE_HOUR))
+        .setStatisticsEnabled(true);
+
+    //create the cache
+    Cache<String, Integer> cache = cacheManager.createCache("simpleCache", config);
+
+    //cache operations
+    String key = "key";
+    Integer value1 = 1;
+    cache.put("key", value1);
+    Integer value2 = cache.get(key);
+    assertEquals(value1, value2);
+    cache.remove(key);
+    assertNull(cache.get(key));
+
+```
+
+在使用默认的 CachingProvider 和默认的 CacheManager 的地方，有一个获取 Cache 的静态便捷方法，Caching.getCache：
+
+```java
+//get the cache
+    Cache<String, Integer> cache = Caching.getCache("simpleCache",
+        String.class, Integer.class);
+
+```
+
+
+
 ### [guava](https://github.com/google/guava)
 ### [ehcache3](https://github.com/ehcache/ehcache3)
 ### [caffeine](https://github.com/ben-manes/caffeine)
