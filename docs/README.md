@@ -13,4 +13,23 @@
 
 *TODO*
 
-- [ ] *Java本地缓存*
+- [ ] mysql
+- [ ] juc
+- [ ] netty
+- [ ] spring
+- [ ] springboot
+- [ ] springcloud
+- [ ] mybatis
+- [ ] mq
+  - [ ] rabbitmq
+  - [ ] kafka
+  - [ ] pulsar
+  - [ ] rocketmq
+  - [ ] activemq
+- [ ] redis
+- [ ] sharding-jdbc
+  - [ ] shardingsphere
+- [ ] zookeeper
+- [ ] dubbo
+- [ ] jvm
+- [ ] 分布式监控
