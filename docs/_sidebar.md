@@ -12,4 +12,4 @@
 
 - Misc
   - [Windows](misc/Windows.md)
-  - [书单](misc/reading_list.md)
+  - [Reference](misc/reading_list.md)
