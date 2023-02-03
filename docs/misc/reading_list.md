@@ -2,15 +2,19 @@
 {docsify-updated}
 
 ## 汇编语言
-- [X] 汇编语言
+- [X] [汇编语言](https://book.douban.com/subject/25726019/))
 - [ ] x86汇编语言
 ## 计算机组成原理
-- [ ] 深入理解计算机系统
+- [X] [深入理解计算机系统](https://book.douban.com/subject/26912767/)
 ## 数据结构和算法
+- [ ] [数据结构（C++语言版）](https://book.douban.com/subject/25859528/)
+- [ ] [算法（第4版）](https://book.douban.com/subject/19952400/)
 ## 网络
-- [ ] TCP/IP协议详解 
+- [X] [TCP/IP协议详解](https://book.douban.com/subject/1088054/)
 ## 操作系统
+- [X] [操作系统导论](https://book.douban.com/subject/33463930/)
+## 系统设计
+- [X] [数据密集型应用系统设计](https://book.douban.com/subject/30329536/)
 ## 数据库
 ## Java
-## 分布式
-## 系统设计
+
