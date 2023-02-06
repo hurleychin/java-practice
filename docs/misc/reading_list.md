@@ -2,8 +2,8 @@
 {docsify-updated}
 
 ## 汇编语言
-- [X] [汇编语言](https://book.douban.com/subject/25726019/))
-- [ ] x86汇编语言
+- [X] [汇编语言](https://book.douban.com/subject/25726019/)
+- [ ] [x86汇编语言] (https://book.douban.com/subject/20492528/)
 ## 计算机组成原理
 - [X] [深入理解计算机系统](https://book.douban.com/subject/26912767/)
 ## 数据结构和算法
@@ -17,4 +17,5 @@
 - [X] [数据密集型应用系统设计](https://book.douban.com/subject/30329536/)
 ## 数据库
 ## Java
-
+- [ ] [深入理解Java虚拟机（第3版）](https://book.douban.com/subject/34907497/)
+- [ ] [Java 并发编程实战](https://book.douban.com/subject/10484692/)
