@@ -4,6 +4,15 @@ import java.math.BigDecimal;
 
 public class FloatEcho {
     public static void main(String[] args) {
+
+        double a=0.1;
+        double b=0.2;
+        double c=0.3;
+        System.out.println((a+b)==c);
+
+    }
+
+    private static void testFloat(){
         System.out.println(Float.valueOf("499999.78"));
         System.out.println(Float.toHexString(499999.78f));
         //1111010000100011111.1100011110101110000101000111101011100001010001111011
@@ -29,9 +38,6 @@ public class FloatEcho {
 
         System.out.println(integerToBinary(5999999));
         System.out.println(fractionalToBinary(0.78));
-
-
-
     }
 
     /**

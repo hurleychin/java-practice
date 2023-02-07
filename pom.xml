@@ -17,6 +17,7 @@
         <module>sharding-jdbc</module>
         <module>spring-cloud</module>
         <module>algorithm</module>
+        <module>netty</module>
     </modules>
 
     <dependencies>
