@@ -17,5 +17,10 @@
 - [X] [数据密集型应用系统设计](https://book.douban.com/subject/30329536/)
 ## 数据库
 ## Java
+### JVM
 - [ ] [深入理解Java虚拟机（第3版）](https://book.douban.com/subject/34907497/)
+### concurrent
 - [ ] [Java 并发编程实战](https://book.douban.com/subject/10484692/)
+### Netty
+- [ ] [Netty实战](https://book.douban.com/subject/27038538/)
+- [ ] [Netty权威指南（第2版）](https://book.douban.com/subject/26373138/)
