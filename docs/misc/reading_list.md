@@ -3,7 +3,7 @@
 
 ## 汇编语言
 - [X] [汇编语言](https://book.douban.com/subject/25726019/)
-- [ ] [x86汇编语言] (https://book.douban.com/subject/20492528/)
+- [ ] [x86汇编语言](https://book.douban.com/subject/20492528/)
 ## 计算机组成原理
 - [X] [深入理解计算机系统](https://book.douban.com/subject/26912767/)
 ## 数据结构和算法
@@ -13,6 +13,8 @@
 - [X] [TCP/IP协议详解](https://book.douban.com/subject/1088054/)
 ## 操作系统
 - [X] [操作系统导论](https://book.douban.com/subject/33463930/)
+- [ ] [Linux/UNIX系统编程手册](https://book.douban.com/subject/25809330/)
+- 
 ## 系统设计
 - [X] [数据密集型应用系统设计](https://book.douban.com/subject/30329536/)
 ## 数据库

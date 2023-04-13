@@ -1,6 +1,7 @@
 package com.evil.discard;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufUtil;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.util.ReferenceCountUtil;
@@ -12,16 +13,22 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
 
         ByteBuf in = (ByteBuf) msg;
         try {
-            System.out.println(in.toString(io.netty.util.CharsetUtil.US_ASCII));
+            while (in.isReadable()) { // (1)
+                System.out.print((char) in.readByte());
+                System.out.flush();
+            }
+
+//            System.out.println(in.toString(io.netty.util.CharsetUtil.US_ASCII))
+
         } finally {
-            ReferenceCountUtil.release(msg);
+            ReferenceCountUtil.release(msg); // (2)
         }
+
     }
 
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        ctx.writeAndFlush("Welcome");
     }
 
     @Override

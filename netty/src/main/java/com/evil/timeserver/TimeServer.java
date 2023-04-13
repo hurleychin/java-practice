@@ -20,7 +20,7 @@ public class TimeServer {
     }
 
     public void run() throws Exception {
-        EventLoopGroup bossGroup=new NioEventLoopGroup();
+        EventLoopGroup bossGroup=new NioEventLoopGroup(1);
         EventLoopGroup workGroup=new NioEventLoopGroup();
 
         try {
@@ -43,6 +43,8 @@ public class TimeServer {
             workGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
+
+
 
     }
 
