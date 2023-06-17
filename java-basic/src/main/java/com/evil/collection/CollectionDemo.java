@@ -1,5 +1,7 @@
 package com.evil.collection;
 
+import org.junit.jupiter.api.Test;
+
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.*;
@@ -39,5 +41,25 @@ public class CollectionDemo {
 //        pList.removeAll(hit);
 //        System.out.println(pList);
 
+    }
+
+    @Test
+    public void testMutiIterator(){
+        List<String> data=Arrays.asList("a","b","c","d","e","ab");
+        List<String> list=new ArrayList<>();
+        list.addAll(data);
+
+        Iterator iterator=list.iterator();
+        while (iterator.hasNext()){
+            String s= (String) iterator.next();
+            if(s.contains("a")){
+                iterator.remove();
+            }
+        }
+
+        iterator=list.iterator();
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
     }
 }

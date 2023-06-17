@@ -1,13 +1,13 @@
 package com.evil.file;
 
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.nio.channels.FileLock;
 
-@Log4j2
+@Slf4j
 public class FileLockThread extends Thread {
 
     private String lockName;
@@ -35,14 +35,14 @@ public class FileLockThread extends Thread {
                     runnable.run();
                 }
             } catch (Throwable e) {
-                log.error(e);
+                log.error("",e);
             } finally {
                 try {
                     if (null != lock) {
                         lock.release();
                     }
                 } catch (IOException e) {
-                    log.error(e);
+                    log.error("",e);
                 }
             }
         }

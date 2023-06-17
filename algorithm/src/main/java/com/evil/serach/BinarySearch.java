@@ -5,18 +5,7 @@ package com.evil.serach;
  * @author qinhulin on 2020-09-24
  */
 public class BinarySearch {
-    public static void main(String[] args) {
-
-        int nums[]={1,4,16,24,31,40,50,63,100};
-
-        System.out.println( search(nums,4));
-        System.out.println( search(nums,1));
-        System.out.println( search(nums,100));
-        System.out.println( search(nums,40));
-        System.out.println( search(nums,9));
-    }
-
-    private static int search(int[] nums, int target) {
+    private int search(int[] nums, int target) {
         int left=0;
         int right=nums.length-1;
 
