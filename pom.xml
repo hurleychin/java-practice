@@ -18,6 +18,7 @@
         <module>spring-cloud</module>
         <module>algorithm</module>
         <module>netty</module>
+        <module>design-pattern</module>
     </modules>
 
     <dependencies>

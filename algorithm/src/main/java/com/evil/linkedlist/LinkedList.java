@@ -1,5 +1,6 @@
 package com.evil.linkedlist;
 
+import java.util.Iterator;
 import java.util.function.Consumer;
 
 /**
@@ -9,7 +10,7 @@ import java.util.function.Consumer;
  * @version 0.0.1
  * @since 2023-06-08
  */
-public class LinkedList {
+public class LinkedList implements Iterable {
     private Node head;
 
     public void add(int value){
@@ -25,18 +26,51 @@ public class LinkedList {
         temp.next=node;
     }
 
-    public void iterator(Consumer consumer){
+    public void remove(int value){
+        if(head==null){
+            return;
+        }
+        if(head.value==value){
+            head=head.next;
+            return;
+        }
         Node temp=head;
-        while(temp!=null){
-            consumer.accept(temp.value);
+        while(temp.next!=null){
+            if(temp.next.value==value){
+                temp.next=temp.next.next;
+                return;
+            }
             temp=temp.next;
         }
     }
 
-    private static class Node{
-        private int value;
-        private Node next;
 
+    @Override
+    public Iterator iterator() {
+        return new Iterator() {
+            Node temp=head;
+            @Override
+            public boolean hasNext() {
+                return temp!=null;
+            }
+
+            @Override
+            public Object next() {
+                Node node=temp;
+                temp=temp.next;
+                return node.value;
+            }
+        };
+    }
+
+    @Override
+    public void forEach(Consumer action) {
+        Iterable.super.forEach(action);
+    }
+
+    class Node{
+         int value;
+         Node next;
         public Node(int value) {
             this.value = value;
         }
