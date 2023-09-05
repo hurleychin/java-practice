@@ -1,6 +1,6 @@
 package com.evil.behavioral.chainofresponsibility;
 
-public class Main {
+public class Client {
     public static void main(String[] args) {
         Logger consoleLogger = new ConsoleLogger();
         Logger fileLogger = new FileLogger();

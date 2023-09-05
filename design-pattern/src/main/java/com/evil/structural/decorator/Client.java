@@ -1,6 +1,6 @@
 package com.evil.structural.decorator;
 
-public class Main {
+public class Client {
     public static void main(String[] args) {
         Coffee coffee = new SimpleCoffee();
         System.out.println("Cost: " + coffee.getCost() + " USD"); // 输出：Cost: 5.0 USD

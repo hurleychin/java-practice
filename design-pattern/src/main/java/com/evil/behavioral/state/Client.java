@@ -7,7 +7,7 @@ package com.evil.behavioral.state;
  * @version 1.0.0
  * @since 2023-09-03
  */
-public class Main {
+public class Client {
     public static void main(String[] args) {
         Document document = new Document();
 
