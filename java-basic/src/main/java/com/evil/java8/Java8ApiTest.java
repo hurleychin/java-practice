@@ -2,10 +2,7 @@ package com.evil.java8;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -42,6 +39,20 @@ public class Java8ApiTest {
         List<String> words = Arrays.asList("Hello", "World");
         words.stream().flatMap(s -> Arrays.stream(s.split("")).map(String::toUpperCase)).forEach(System.out::println);
         System.out.println("------------------------");
+
+
+    }
+
+    @Test
+    public void testInt(){
+       try{
+          int i=10/0;
+       }catch (Exception e){
+           throw e;
+
+       }finally {
+           System.out.println("finally");
+       }
 
 
     }

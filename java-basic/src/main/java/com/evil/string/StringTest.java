@@ -32,6 +32,16 @@ public class StringTest {
         }
     }
 
+    @Test
+    public void  stringBufferTest(){
+        StringBuffer sb = new StringBuffer();
+        sb.append("hello");
+        sb.append(",");
+        sb.append("world");
+        sb.replace(0, 5, "good");
+        System.out.println(sb.toString());
+    }
+
     public static String[] splitString(String longString, int maxLength) {
         int length = longString.length();
         int numParts = (length + maxLength - 1) / maxLength; // 计算切割后的部分数量
