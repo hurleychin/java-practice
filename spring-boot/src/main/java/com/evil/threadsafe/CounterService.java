@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import static org.springframework.beans.factory.config.BeanDefinition.SCOPE_PROTOTYPE;
 
 @Service
-//@Scope(SCOPE_PROTOTYPE) fail
+//@Scope(SCOPE_PROTOTYPE) @Autowire fail，ApplicationContext.getBean() pass
 public class CounterService {
 
     /**
