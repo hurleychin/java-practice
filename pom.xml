@@ -19,6 +19,7 @@
         <module>algorithm</module>
         <module>netty</module>
         <module>design-pattern</module>
+        <module>dagger</module>
     </modules>
 
     <dependencies>
